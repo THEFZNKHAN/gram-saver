@@ -14,6 +14,12 @@ const Home = () => {
 
   const apiKey = process.env.REACT_APP_X_RAPIDAPI_KEY;
 
+  const getShortURL = (fullURL) => {
+    const urlParts = fullURL.split("/");
+    const shortURL = urlParts[urlParts.length - 2];
+    return shortURL;
+  };
+
   const hideAlerts = () => {
     setTimeout(() => {
       setIsDownloaded(false);
@@ -23,24 +29,20 @@ const Home = () => {
 
   const handleClick = async () => {
     setLoading(true);
-
+    const shortURL = getShortURL(url);
     const options = {
       method: "GET",
-      url: "https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index",
-      params: {
-        url: url,
-      },
+      url: `https://instagram-bulk-scraper-latest.p.rapidapi.com/webmedia_info_from_shortcode/${shortURL}`,
       headers: {
         "X-RapidAPI-Key": apiKey,
-        "X-RapidAPI-Host":
-          "instagram-downloader-download-instagram-videos-stories.p.rapidapi.com",
+        "X-RapidAPI-Host": "instagram-bulk-scraper-latest.p.rapidapi.com",
       },
     };
 
     try {
       const response = await axios.request(options);
       // get the download link from the response data
-      const downloadLink = response.data.media;
+      const downloadLink = response.data.data.video_url;
       // Redirect user to the download link
       window.location.href = downloadLink;
       setIsDownloaded(true);

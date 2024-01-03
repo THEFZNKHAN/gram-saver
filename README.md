@@ -31,7 +31,7 @@ To run the app locally, follow these steps:
 
 ## APIs Used
 
-- [Instagram Downloader API](https://rapidapi.com/maatootz/api/instagram-downloader-download-instagram-videos-stories)
+- [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest)
 
 ## Contributions
 
