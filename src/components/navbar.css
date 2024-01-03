@@ -32,3 +32,44 @@
   font-weight: 550;
   font-size: 20px;
 }
+
+@media (max-width: 1023px) {
+  .navbar {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5px 20px;
+    text-align: center;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar p {
+    font-size: 15px;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 300px) {
+  .navbar h1 {
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .navbar p {
+    font-size: 10px;
+  }
+}
