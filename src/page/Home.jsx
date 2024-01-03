@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, TextField } from "@mui/material";
+import Alert from "@mui/material/Alert";
 import DownloadIcon from "@mui/icons-material/Download";
 
 import "./home.css";
@@ -8,11 +9,21 @@ import "./home.css";
 const Home = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isDownloaded, setIsDownloaded] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const apiKey = process.env.REACT_APP_X_RAPIDAPI_KEY;
 
+  const hideAlerts = () => {
+    setTimeout(() => {
+      setIsDownloaded(false);
+      setIsError(false);
+    }, 3000);
+  };
+
   const handleClick = async () => {
     setLoading(true);
+
     const options = {
       method: "GET",
       url: "https://instagram-downloader-download-instagram-videos-stories.p.rapidapi.com/index",
@@ -32,23 +43,33 @@ const Home = () => {
       const downloadLink = response.data.media;
       // Redirect user to the download link
       window.location.href = downloadLink;
-
-      // Process the response data or update UI based on success
-      // Example: Update UI with success message
-      // (you can use state to display a message)
-      // setMessage('Download successful');
+      setIsDownloaded(true);
+      hideAlerts();
     } catch (error) {
-      console.error(error);
-
-      // Handle error - you can display an error message to users
-      // setMessage('Error downloading. Please try again.');
+      setIsError(true);
+      hideAlerts();
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
 
   return (
     <div className="home-div">
+      {loading && (
+        <Alert variant="filled" severity="info" className="alert">
+          Downloading will start in a few seconds...
+        </Alert>
+      )}
+      {isDownloaded && (
+        <Alert variant="filled" severity="success" className="alert">
+          Download complete!
+        </Alert>
+      )}
+      {isError && (
+        <Alert variant="filled" severity="error" className="alert">
+          Error occurred. Please try again later.
+        </Alert>
+      )}
       <div className="box">
         <TextField
           label="Paste URL Instagram"
@@ -64,7 +85,7 @@ const Home = () => {
           className="button"
           onClick={handleClick}
           endIcon={<DownloadIcon />}
-          disabled={loading}
+          disabled={loading || !url.trim()}
         >
           {loading ? "Downloading..." : "Download"}{" "}
         </Button>
