@@ -6,7 +6,8 @@
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-div .box {
@@ -30,4 +31,10 @@
 .home-div .box .button {
   width: 180px;
   height: 50px;
+}
+
+.home-div .alert {
+  margin-top: 5px;
+  font-size: 15px;
+  position: fixed;
 }
