@@ -1,7 +1,7 @@
 .home-div {
   margin: 0;
   height: 100vh;
-  background-image: url("https://img.freepik.com/free-photo/blurred-abstract-background-smooth-colors_58702-1548.jpg?w=2000&t=st=1704302803~exp=1704303403~hmac=3cf38257bfaff52a3f43ae6c3d728ea8261bc0a6910a841519cc1a30c82380a2");
+  background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
