@@ -10,7 +10,7 @@ import "./stories.css";
 const Stories = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [stories, setStories] = useState([]);
 
@@ -18,7 +18,7 @@ const Stories = () => {
 
   const hideAlerts = () => {
     setTimeout(() => {
-      setIsDownloaded(false);
+      setIsDownloading(false);
       setIsError(false);
     }, 3000);
   };
@@ -37,26 +37,18 @@ const Stories = () => {
 
     try {
       const response = await axios.request(options);
-      console.log("API Response:", response.data);
-
       const storiesData = response.data.data.stories;
-      const storyImages = storiesData.map(
-        (story) => story.image_versions2.candidates[3].url
-      );
-      console.log(storyImages);
+      const storyImages = storiesData.map((story) => ({
+        storyImage: story.image_versions2.candidates[3].url,
+        storyVideo: story.video_versions[0].url,
+      }));
 
       if (storiesData.length > 0) {
-        // const downloadLink = stories[0].video_versions[0].url;
-
-        setStories(storiesData);
-
-        // window.location.href = downloadLink;
+        setStories(storyImages);
       } else {
         throw new Error("No stories found");
       }
     } catch (error) {
-      console.error("API Error:", error);
-
       setIsError(true);
       hideAlerts();
     } finally {
@@ -65,6 +57,7 @@ const Stories = () => {
   };
 
   const handleDownload = (videoUrl) => {
+    setIsDownloading(true);
     window.location.href = videoUrl;
   };
 
@@ -78,9 +71,9 @@ const Stories = () => {
           Downloading will start in a few seconds...
         </Alert>
       )}
-      {isDownloaded && (
+      {isDownloading && (
         <Alert variant="filled" severity="success" className="alert">
-          Download complete!
+          Downloading...
         </Alert>
       )}
       {isError && (
@@ -120,12 +113,12 @@ const Stories = () => {
         <div className="response">
           {stories.map((story, index) => (
             <div key={index} className="story-item">
-              <img src={story.image_url} alt="Story" />
+              <img src={story.storyImage} alt="Story" />
               <Button
                 variant="contained"
                 color="success"
                 className="button"
-                onClick={() => handleDownload(story.video_versions[0].url)}
+                onClick={() => handleDownload(story.storyVideo)}
                 endIcon={<DownloadIcon />}
               >
                 Download
