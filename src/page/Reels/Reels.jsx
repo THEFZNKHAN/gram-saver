@@ -73,13 +73,13 @@ const Reels = () => {
       <div className="intro">
         <h1>Instagram Reels Downloader</h1>
         <p>
-          Download Instagram Reels videos in HD quality. Paste the URL of the
+          Download Instagram Reels videos in High quality. Paste the URL of the
           reel and click on the download button.
         </p>
       </div>
       <div className="box">
         <TextField
-          label="Paste URL Instagram"
+          label="Paste URL"
           color="primary"
           className="input"
           focused

@@ -40,13 +40,9 @@ body {
 
 .reels-icon img,
 .stories-icon img {
-  height: 80%;
+  height: 70%;
   width: auto;
   margin-bottom: 10px;
-}
-
-.stories-icon img {
-  height: 70%;
 }
 
 .reels-icon h1,
@@ -81,13 +77,8 @@ body {
 
   .reels-icon img,
   .stories-icon img {
-    height: 60%;
+    height: 68%;
     width: 80%;
-  }
-
-  .stories-icon img {
-    width: 68%;
-    margin-bottom: 30px;
   }
 
   .reels-icon h1,

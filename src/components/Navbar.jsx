@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ReactComponent as Hamburger } from "../assets/hamburger.svg";
 
 import "./navbar.css";
@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
-  
+
   return (
     <nav className="navbar">
       <div className="container">
@@ -23,13 +23,13 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/reels">Reels</Link>
+              <NavLink to="/reels">Reels</NavLink>
             </li>
             <li>
-              <Link to="/stories">Stories</Link>
+              <NavLink to="/stories">Stories</NavLink>
             </li>
           </ul>
         </div>

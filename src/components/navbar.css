@@ -74,10 +74,6 @@
   background-color: #574c4c;
 }
 
-.nav-elements ul a:hover {
-  color: rgb(206, 51, 122);
-}
-
 @media (max-width: 768px) {
   .logo h1 {
     font-size: 1.5rem;
