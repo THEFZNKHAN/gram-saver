@@ -2,6 +2,15 @@
 
 This React-based web app allows users to download Instagram stories and reels easily. It utilizes the [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest) from RapidAPI to fetch Instagram content.
 
+## Home Page
+![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/e766a1dd-4719-4376-a71f-3a6b392572a2)
+
+## Reels Downlaod Page
+![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/4818fe32-70ed-4ab4-9975-6f5007d51ed9)
+
+## Stories Download Page
+![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/2540503f-db20-44ba-b60d-05fe7d9ac410)
+
 ## Features
 
 - Download Instagram stories and reels by providing the URL.
@@ -43,4 +52,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## App Live
 
-[Insta Saver](https://thefznkhan.github.io/insta-saver/)
+[Gram Saver](https://gram-saver.web.app/)
