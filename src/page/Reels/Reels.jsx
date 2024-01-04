@@ -9,7 +9,7 @@ import "./reels.css";
 const Reels = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const apiKey = process.env.REACT_APP_X_RAPIDAPI_KEY;
@@ -22,7 +22,7 @@ const Reels = () => {
 
   const hideAlerts = () => {
     setTimeout(() => {
-      setIsDownloaded(false);
+      setIsDownloading(false);
       setIsError(false);
     }, 3000);
   };
@@ -43,7 +43,7 @@ const Reels = () => {
       const response = await axios.request(options);
       const downloadLink = response.data.data.video_url;
       window.location.href = downloadLink;
-      setIsDownloaded(true);
+      setIsDownloading(true);
       hideAlerts();
     } catch (error) {
       setIsError(true);
@@ -60,9 +60,9 @@ const Reels = () => {
           Downloading will start in a few seconds...
         </Alert>
       )}
-      {isDownloaded && (
+      {isDownloading && (
         <Alert variant="filled" severity="success" className="alert">
-          Download complete!
+          Downloading...
         </Alert>
       )}
       {isError && (
@@ -94,7 +94,7 @@ const Reels = () => {
           endIcon={<DownloadIcon />}
           disabled={loading || !url.trim()}
         >
-          {loading ? "Downloading..." : "Download"}{" "}
+          {loading ? "Response..." : "Download"}{" "}
         </Button>
       </div>
       <div className="response"></div>
