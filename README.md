@@ -11,6 +11,10 @@ This React-based web app allows users to download Instagram stories and reels ea
 ## Stories Download Page
 ![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/2540503f-db20-44ba-b60d-05fe7d9ac410)
 
+#### Response of Stories SEND Button
+![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/eba9bf23-d727-4f9e-b1e1-a9cc5dc30ead)
+
+
 ## Features
 
 - Download Instagram stories and reels by providing the URL.
