@@ -1,10 +1,10 @@
-# Insta Saver
+# Gram Saver
 
-This React-based web app allows users to download Instagram stories, videos, and reels easily. It utilizes the [Instagram Downloader API](https://rapidapi.com/maatootz/api/instagram-downloader-download-instagram-videos-stories) from RapidAPI to fetch Instagram content.
+This React-based web app allows users to download Instagram stories and reels easily. It utilizes the [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest) from RapidAPI to fetch Instagram content.
 
 ## Features
 
-- Download Instagram stories, videos, and reels by providing the URL.
+- Download Instagram stories and reels by providing the URL.
 - Utilizes Material UI for a clean and user-friendly interface.
 - Simple input field and download button for easy usability.
   
@@ -12,7 +12,7 @@ This React-based web app allows users to download Instagram stories, videos, and
 
 To run the app locally, follow these steps:
 
-1. Clone this repository `git clone https://github.com/THEFZNKHAN/insta-saver.git`.
+1. Clone this repository `git clone https://github.com/THEFZNKHAN/gram-saver.git`.
 2. Install dependencies using `npm install`.
 3. Start the app with `npm start`.
 4. Access the app on `http://localhost:3000` in your browser.
@@ -20,7 +20,7 @@ To run the app locally, follow these steps:
 ## Usage
 
 1. Open the app in your browser.
-2. Paste the URL of the Instagram video/story/reel into the provided input field.
+2. Paste the URL of the Instagram story/reel into the provided input field.
 3. Tap/click the download button to initiate the download of the video to your system.
 
 ## Technologies Used

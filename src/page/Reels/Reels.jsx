@@ -4,9 +4,9 @@ import { Button, TextField } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import DownloadIcon from "@mui/icons-material/Download";
 
-import "./home.css";
+import "./reels.css";
 
-const Home = () => {
+const Reels = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [isDownloaded, setIsDownloaded] = useState(false);
@@ -41,9 +41,7 @@ const Home = () => {
 
     try {
       const response = await axios.request(options);
-      // get the download link from the response data
       const downloadLink = response.data.data.video_url;
-      // Redirect user to the download link
       window.location.href = downloadLink;
       setIsDownloaded(true);
       hideAlerts();
@@ -56,7 +54,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-div">
+    <div className="reels-div">
       {loading && (
         <Alert variant="filled" severity="info" className="alert">
           Downloading will start in a few seconds...
@@ -72,9 +70,16 @@ const Home = () => {
           Error occurred. Please try again later.
         </Alert>
       )}
+      <div className="intro">
+        <h1>Instagram Reels Downloader</h1>
+        <p>
+          Download Instagram Reels videos in High quality. Paste the URL of the
+          reel and click on the download button.
+        </p>
+      </div>
       <div className="box">
         <TextField
-          label="Paste URL Instagram"
+          label="Paste URL"
           color="primary"
           className="input"
           focused
@@ -92,8 +97,9 @@ const Home = () => {
           {loading ? "Downloading..." : "Download"}{" "}
         </Button>
       </div>
+      <div className="response"></div>
     </div>
   );
 };
 
-export default Home;
+export default Reels;

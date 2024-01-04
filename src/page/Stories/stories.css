@@ -1,0 +1,155 @@
+.stories-div {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories-div .intro {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stories-div .intro h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #ff3b3b;
+}
+
+.stories-div .intro p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.stories-div .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.stories-div .box .input {
+  width: 500px;
+  margin: 20px 0;
+}
+
+.stories-div .box .button {
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 180px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.stories-div .alert {
+  margin-top: 5px;
+  font-size: 15px;
+  position: fixed;
+}
+
+.stories-div .response {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid black;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories-div .response .story-item {
+  margin: 5px 10px;
+  padding: 10px;
+  width: 300px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stories-div .response .story-item img {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+  .stories-div .intro {
+    width: 80%;
+  }
+
+  .stories-div .intro h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .stories-div .intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .stories-div .box {
+    width: 90%;
+    height: 300px;
+  }
+
+  .stories-div .box .input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-div .intro h1 {
+    font-size: 1.2rem;
+  }
+
+  .stories-div .intro p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .stories-div .box {
+    height: 250px;
+  }
+
+  .stories-div .box .button {
+    width: 140px;
+    font-size: 10px;
+  }
+}
