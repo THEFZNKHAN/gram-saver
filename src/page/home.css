@@ -1,7 +1,7 @@
 .home-div {
   margin: 0;
   height: 100vh;
-  background-image: url("../images/bg.jpg");
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

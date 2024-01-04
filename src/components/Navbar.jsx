@@ -6,10 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Insta Saver</h1>
-      <p>
-        Download Instagram Stories, Videos, and Reels by pasting their URLs in
-        the input box.
-      </p>
+      <p>Download Instagram Reels by pasting their URL in the input box.</p>
     </nav>
   );
 };
