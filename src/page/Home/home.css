@@ -1,0 +1,97 @@
+body {
+  overflow: hidden;
+}
+
+.home-div {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-link {
+  text-decoration: none;
+}
+
+.reels-icon,
+.stories-icon {
+  height: 380px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.reels-icon img,
+.stories-icon img {
+  height: 80%;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.stories-icon img {
+  height: 70%;
+}
+
+.reels-icon h1,
+.stories-icon h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .home-div {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .icon-link {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reels-icon,
+  .stories-icon {
+    height: auto;
+    width: 70%;
+  }
+
+  .reels-icon img,
+  .stories-icon img {
+    height: 60%;
+    width: 80%;
+  }
+
+  .stories-icon img {
+    width: 68%;
+    margin-bottom: 30px;
+  }
+
+  .reels-icon h1,
+  .stories-icon h1 {
+    font-size: 1.2em;
+  }
+}
