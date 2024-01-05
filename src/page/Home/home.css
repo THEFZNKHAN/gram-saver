@@ -15,6 +15,7 @@ body {
     #fd1d1d
   );
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -24,7 +25,8 @@ body {
 }
 
 .reels-icon,
-.stories-icon {
+.stories-icon,
+.youtube-icon {
   height: 380px;
   width: 300px;
   border: 2px solid black;
@@ -36,19 +38,23 @@ body {
   justify-content: center;
   text-align: center;
   padding: 20px;
+  margin: 10px;
 }
 
 .reels-icon img,
-.stories-icon img {
+.stories-icon img,
+.youtube-icon img {
   height: 70%;
   width: auto;
   margin-bottom: 10px;
 }
 
 .reels-icon h1,
-.stories-icon h1 {
+.stories-icon h1,
+.youtube-icon h1 {
   margin: 0;
   font-size: 1.5em;
+  color: rgb(209, 35, 35);
 }
 
 @media (max-width: 768px) {
@@ -57,32 +63,27 @@ body {
   }
 
   .home-div {
-    flex-direction: column;
     height: auto;
     padding: 20px;
   }
 
-  .icon-link {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .reels-icon,
-  .stories-icon {
+  .stories-icon,
+  .youtube-icon {
     height: auto;
-    width: 70%;
+    width: 250px;
   }
 
   .reels-icon img,
-  .stories-icon img {
+  .stories-icon img,
+  .youtube-icon img {
     height: 68%;
     width: 80%;
   }
 
   .reels-icon h1,
-  .stories-icon h1 {
+  .stories-icon h1,
+  .youtube-icon h1 {
     font-size: 1.2em;
   }
 }

@@ -59,8 +59,8 @@
 }
 
 .nav-elements ul a.active {
-  color: #574c4c;
-  font-weight: 500;
+  color: red;
+  font-weight: 700;
   position: relative;
 }
 
@@ -71,7 +71,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #574c4c;
+  background-color: red;
 }
 
 @media (max-width: 768px) {

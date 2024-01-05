@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import reelsIcon from "../../assets/reels.png";
 import storiesIcon from "../../assets/stories.png";
+import youtubeIcon from "../../assets/youtube.png";
 import "./home.css";
 
 const Home = () => {
@@ -16,6 +17,12 @@ const Home = () => {
         <div className="stories-icon">
           <img src={storiesIcon} alt="stories-icon" />
           <h1>Download Stories</h1>
+        </div>
+      </Link>
+      <Link to="/youtube" className="icon-link">
+        <div className="youtube-icon">
+          <img src={youtubeIcon} alt="youtube-icon" />
+          <h1>Download YouTube Videos</h1>
         </div>
       </Link>
     </div>
