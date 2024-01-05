@@ -58,6 +58,7 @@ const Stories = () => {
 
   const handleDownload = (videoUrl) => {
     setIsDownloading(true);
+    hideAlerts();
     window.location.href = videoUrl;
   };
 
