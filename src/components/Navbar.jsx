@@ -31,6 +31,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/stories">Stories</NavLink>
             </li>
+            <li>
+              <NavLink to="/youtube">You Tube</NavLink>
+            </li>
           </ul>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./page/Home/Home";
 import Reels from "./page/Reels/Reels";
 import Stories from "./page/Stories/Stories";
+import YouTube from "./page/YouTube/YouTube";
 
 import "./app.css";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reels" element={<Reels />} />
         <Route path="/stories" element={<Stories />} />
+        <Route path="/youtube" element={<YouTube />} />
       </Routes>
     </Router>
   );
