@@ -4,19 +4,17 @@ import { Button, TextField } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import DownloadIcon from "@mui/icons-material/Download";
 
-import "./reels.css";
+import "./spotify.css";
 
-const Reels = () => {
+const Spotify = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const apiKey = process.env.REACT_APP_X_RAPIDAPI_KEY;
-
   const getShortURL = (fullURL) => {
     const urlParts = fullURL.split("/");
-    const shortURL = urlParts[urlParts.length - 2];
+    const shortURL = urlParts[urlParts.length - 1];
     return shortURL;
   };
 
@@ -30,19 +28,12 @@ const Reels = () => {
   const handleClick = async () => {
     setLoading(true);
     const shortURL = getShortURL(url);
-    const options = {
-      method: "GET",
-      url: `https://instagram-bulk-scraper-latest.p.rapidapi.com/webmedia_info_from_shortcode/${shortURL}`,
-      headers: {
-        "X-RapidAPI-Key": apiKey,
-        "X-RapidAPI-Host": "instagram-bulk-scraper-latest.p.rapidapi.com",
-      },
-    };
-
     try {
-      const response = await axios.request(options);
-      const downloadLink = response.data.data.video_url;
-      window.location.href = downloadLink;
+      const response = await axios.get(
+        `https://lemonic.viperadnan.com/api/track/${shortURL}`
+      );
+      const { url: redirectUrl } = response.data;
+      window.location.href = redirectUrl;
       setIsDownloading(true);
       hideAlerts();
     } catch (error) {
@@ -54,7 +45,7 @@ const Reels = () => {
   };
 
   return (
-    <div className="reels-div">
+    <div className="spotify-div">
       {loading && (
         <Alert variant="filled" severity="info" className="alert">
           Download will be start soon...
@@ -71,10 +62,10 @@ const Reels = () => {
         </Alert>
       )}
       <div className="intro">
-        <h1>Instagram Reels Downloader</h1>
+        <h1>Spotify Track Downloader</h1>
         <p>
-          Download Instagram Reels videos in High quality. Paste the URL of the
-          reel and click on the download button.
+          Download Spotify Tracks/Songs. Paste the URL of the Track and click on the
+          download button.
         </p>
       </div>
       <div className="box">
@@ -101,4 +92,4 @@ const Reels = () => {
   );
 };
 
-export default Reels;
+export default Spotify;

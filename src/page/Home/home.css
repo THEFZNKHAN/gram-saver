@@ -1,10 +1,7 @@
-body {
-  overflow: hidden;
-}
-
 .home-div {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background: linear-gradient(
     45deg,
     #405de6,
@@ -26,7 +23,8 @@ body {
 
 .reels-icon,
 .stories-icon,
-.youtube-icon {
+.youtube-icon,
+.spotify-icon {
   height: 380px;
   width: 300px;
   border: 2px solid black;
@@ -43,7 +41,8 @@ body {
 
 .reels-icon img,
 .stories-icon img,
-.youtube-icon img {
+.youtube-icon img,
+.spotify-icon img {
   height: 70%;
   width: auto;
   margin-bottom: 10px;
@@ -51,7 +50,8 @@ body {
 
 .reels-icon h1,
 .stories-icon h1,
-.youtube-icon h1 {
+.youtube-icon h1,
+.spotify-icon h1 {
   margin: 0;
   font-size: 1.5em;
   color: rgb(209, 35, 35);
@@ -69,21 +69,24 @@ body {
 
   .reels-icon,
   .stories-icon,
-  .youtube-icon {
+  .youtube-icon,
+  .spotify-icon {
     height: auto;
     width: 250px;
   }
 
   .reels-icon img,
   .stories-icon img,
-  .youtube-icon img {
+  .youtube-icon img,
+  .spotify-icon img {
     height: 68%;
     width: 80%;
   }
 
   .reels-icon h1,
   .stories-icon h1,
-  .youtube-icon h1 {
+  .youtube-icon h1,
+  .spotify-icon h1 {
     font-size: 1.2em;
   }
 }

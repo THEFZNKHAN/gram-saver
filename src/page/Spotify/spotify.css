@@ -1,0 +1,124 @@
+.spotify-div {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spotify-div .intro {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spotify-div .intro h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #f92029;
+}
+
+.spotify-div .intro p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.spotify-div .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.spotify-div .box .input {
+  width: 500px;
+  margin: 20px 0;
+}
+
+.spotify-div .box .button {
+  width: 180px;
+  height: 50px;
+}
+
+.spotify-div .alert {
+  margin-top: 5px;
+  font-size: 15px;
+  position: fixed;
+}
+
+@media (max-width: 800px) {
+  .spotify-div .intro {
+    width: 80%;
+  }
+
+  .spotify-div .intro h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .spotify-div .intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .spotify-div .box {
+    width: 90%;
+    height: 300px;
+  }
+
+  .spotify-div .box {
+    height: 280px;
+  }
+
+  .spotify-div .box .input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .spotify-div .intro h1 {
+    font-size: 1.2rem;
+  }
+
+  .spotify-div .intro p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .spotify-div .box {
+    height: 250px;
+  }
+
+  .spotify-div .box .button {
+    width: 140px;
+    font-size: 10px;
+  }
+}

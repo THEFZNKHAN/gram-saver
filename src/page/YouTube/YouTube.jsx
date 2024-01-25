@@ -76,7 +76,7 @@ const YouTube = () => {
     >
       {loading && (
         <Alert variant="filled" severity="info" className="alert">
-          Downloading will start in a few seconds...
+          Download will be start soon...
         </Alert>
       )}
       {isDownloading && (
