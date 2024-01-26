@@ -1,9 +1,9 @@
 # Gram Saver
 
-This React-based web app allows users to download Instagram (stories & reels) and YouTube audio and video with all possible quality and formate easily. It utilizes the [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest) and [YouTube Download API](https://rapidapi.com/3205/api/youtube86) from RapidAPI.
+This React-based web app allows users to download Instagram (stories & reels), YouTube audio and video with all possible quality and formate and Spotify Tracks easily. It utilizes the [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest) and [YouTube Download API](https://rapidapi.com/3205/api/youtube86) from RapidAPI.
 
 ## Home Page
-![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/91e91b3d-cf02-4368-9273-aec653cd1ca3)
+![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/3700f327-0e8a-49f9-8bec-f19f9e0c27bf)
 
 ## Reels Download Page
 ![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/16783e5a-3d6d-4ed7-b153-521fa5513b5e)
@@ -20,11 +20,15 @@ This React-based web app allows users to download Instagram (stories & reels) an
 #### YouTube Download Page Response
 ![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/8370c5dd-4386-4e51-b5df-853930e4120a)
 
+## Spotify Track Download Page
+![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/49a8c6c2-68ee-41a3-a71a-e2a608e6ad9c)
+
 ## Features
 
 - Download Instagram reels by providing the URL.
 - Download Instagram stories by providing the Username.
 - Download YouTube videos and audios by providing the URL.
+- Download Spotify tracks by providing the URL.
 - Utilizes Material UI for a clean and user-friendly interface.
 - Simple input field and download button for easy usability.
   
@@ -42,7 +46,7 @@ To run the app locally, follow these steps:
 ## Usage
 
 1. Open the app in your browser.
-2. Paste the URLs of Instagram and YouTube into the provided input field.
+2. Paste the URLs of Instagram, YouTube and Spotify into the provided input field.
 3. Tap/click the download button/send to initiate the video download to your system or get the download links.
 
 ## Technologies Used
@@ -55,6 +59,7 @@ To run the app locally, follow these steps:
 
 - [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest)
 - [YouTube Download API](https://rapidapi.com/3205/api/youtube86)
+- [Spotify Download API]().
 
 ## Contributions
 
