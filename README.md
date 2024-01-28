@@ -6,16 +6,16 @@ This React-based web app allows users to download Instagram (stories & reels), Y
 ![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/3700f327-0e8a-49f9-8bec-f19f9e0c27bf)
 
 ## Reels Download Page
-![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/16783e5a-3d6d-4ed7-b153-521fa5513b5e)
+![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/b10d0ce5-8cfc-4a89-8596-fd238094fd1a)
 
 ## Stories Download Page
-![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/7c389c79-0887-4c10-aefa-f084f0c944ef)
+![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/6e8b89cb-a631-4873-aae3-82658a30162b)
 
 #### Stories Download Page Response
 ![image](https://github.com/THEFZNKHAN/insta-saver/assets/124388165/4f6587e2-4af3-46d5-8c11-e1c2a46eb939)
 
 ## YouTube Download Page
-![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/89920bee-7fc4-4438-b6e7-86650b10e312)
+![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/906a34da-0141-4ba8-a3c0-7cdf28662a2b)
 
 #### YouTube Download Page Response
 ![image](https://github.com/THEFZNKHAN/gram-saver/assets/124388165/8370c5dd-4386-4e51-b5df-853930e4120a)
@@ -57,9 +57,9 @@ To run the app locally, follow these steps:
 
 ## APIs Used
 
-- [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest)
-- [YouTube Download API](https://rapidapi.com/3205/api/youtube86)
-- [Spotify Download API]().
+- [Instagram Downloader API](https://rapidapi.com/mrngstar/api/instagram-bulk-scraper-latest).
+- [YouTube Download API](https://rapidapi.com/3205/api/youtube86).
+- [Spotify Download API](https://lemonic.viperadnan.com/api/docs/).
 
 ## Contributions
 
